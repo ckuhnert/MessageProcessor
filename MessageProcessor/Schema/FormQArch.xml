@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Project xmlns="http://tempuri.org/project.xsd">
+  <MessageDefinitions>
+    <Definition name="FormQArch">
+      <Element name="File">
+        <Element name="Header" minOccurs="1" maxOccurs="1">
+          <Element name="HeaderDateText" type="HeaderDateTextType"/>
+          <Element name="Date" type="HeaderDateType" />
+        </Element>
+        <Element name="Row" minOccurs="0" maxOccurs="unbounded">
+          <Element name="RefNo" type="Field1Type" />
+          <Element name="KeyNo" type="Field2Type"/>
+          <Element name="Status1" type="Field3Type"/>
+          <Element name="Status2" type="Field4Type"/>
+          <Element name="ValueDate" type="Field5Type"/>
+          <Element name="CapDate" type="Field6Type"/>
+          <Element name="CapTime" type="Field7Type"/>
+          <Element name="CapUser" type="Field8Type"/>
+          <Element name="FormCode" type="Field9Type"/>
+          <Element name="RemName" type="Field10Type"/>
+          <Element name="BenName" type="Field11Type"/>
+          <Element name="Currency" type="Field12Type"/>
+          <Element name="Amount" type="Field13Type"/>
+          <Element name="MsgType" type="Field14Type"/>
+          <Element name="BrnNo" type="Field15Type"/>
+          <Element name="SwiftMessage" type="Field16Type"/>
+          <Element name="OldRefNo" type="Field17Type"/>
+          <Element name="InitialRefNo" type="Field18Type"/>
+          <Element name="TxnRouteReason" type="Field19Type"/>
+          <Element name="SenderBankSwiftAddress" type="Field20Type"/>
+          <Element name="FundsWithSwiftAddress" type="Field21Type"/>
+          <Element name="FundsWithNostroAcc" type="Field22Type"/>
+          <Element name="FundsWithVostroAcc" type="Field23Type"/>
+          <Element name="FundsWithZapsAcc" type="Field24Type"/>
+          <Element name="BeneficiaryName" type="Field25Type"/>
+          <Element name="BeneficiaryAccount" type="Field26Type"/>
+          <Element name="BeneficiaryResidencyStatus" type="Field27Type"/>
+          <Element name="BeneficiaryCifInfo" type="Field28Type"/>
+          <Element name="PrincipalAmountPaymentMethod" type="Field29Type"/>
+          <Element name="PrincipalAmountConversionRequired" type="Field30Type"/>
+          <Element name="PrincipalAmountValueDate" type="Field31Type"/>
+          <Element name="PrincipalAmountRandValue" type="Field32Type"/>
+          <Element name="PrincipalAmountOriginalAmount" type="Field33Type"/>
+          <Element name="PrincipalAmountOriginalCurrency" type="Field34Type"/>
+          <Element name="ExceptionList" type="Field35Type"/>
+          <Element name="ForeignBankRefNo" type="Field36Type"/>
+          <Element name="OrderingInstitutionBankName" type="Field37Type"/>
+          <Element name="OrderingInstitutionBankSwiftAddress" type="Field38Type"/>
+          <Element name="FormAERequiredBopStatus" type="Field39Type"/>
+          <Element name="SaffyHeader" type="Field40Type"/>
+          <Element name="ReceiverAddress" type="Field41Type"/>
+        </Element>
+
+        <Element name="Footer" minOccurs="1" maxOccurs="1">
+          <Element name="FooterText" type="FooterTextType"/>
+          <Element name="Count" type="FooterCounterType" />
+        </Element>
+      </Element>
+
+      <Type name="HeaderDateTextType" base="string">
+        <Restriction minLength="12" maxLength="12"/>
+      </Type>
+
+      <Type name="HeaderDateType" base="date">
+        <Restriction format="yyyy-MM-dd"/>
+      </Type>
+
+
+      <Type name="Field1Type" base="string">
+        <Restriction minLength="10" maxLength="10"/>
+      </Type>
+
+      <Type name="Field2Type" base="string">
+        <Restriction minLength="10" maxLength="10"/>
+      </Type>
+      <Type name="Field3Type" base="string">
+        <Restriction minLength="10" maxLength="10"/>
+      </Type>
+      <Type name="Field4Type" base="string">
+        <Restriction minLength="10" maxLength="10"/>
+      </Type>
+      <Type name="Field5Type" base="string">
+        <Restriction minLength="10" maxLength="10"/>
+      </Type>
+      <Type name="Field6Type" base="string">
+        <Restriction minLength="10" maxLength="10"/>
+      </Type>
+      <Type name="Field7Type" base="string">
+        <Restriction minLength="10" maxLength="10"/>
+      </Type>
+      <Type name="Field8Type" base="string">
+        <Restriction minLength="10" maxLength="10"/>
+      </Type>
+      <Type name="Field9Type" base="string">
+        <Restriction minLength="10" maxLength="10"/>
+      </Type>
+      <Type name="Field10Type" base="string">
+        <Restriction minLength="10" maxLength="10"/>
+      </Type>
+
+      <Type name="Field11Type" base="string">
+        <Restriction minLength="10" maxLength="10"/>
+      </Type>
+
+      <Type name="Field12Type" base="string">
+        <Restriction minLength="10" maxLength="10"/>
+      </Type>
+      <Type name="Field13Type" base="string">
+        <Restriction minLength="10" maxLength="10"/>
+      </Type>
+      <Type name="Field14Type" base="string">
+        <Restriction minLength="10" maxLength="10"/>
+      </Type>
+      <Type name="Field15Type" base="string">
+        <Restriction minLength="10" maxLength="10"/>
+      </Type>
+      <Type name="Field16Type" base="string">
+        <Restriction minLength="10" maxLength="10"/>
+      </Type>
+      <Type name="Field17Type" base="string">
+        <Restriction minLength="10" maxLength="10"/>
+      </Type>
+      <Type name="Field18Type" base="string">
+        <Restriction minLength="10" maxLength="10"/>
+      </Type>
+      <Type name="Field19Type" base="string">
+        <Restriction minLength="10" maxLength="10"/>
+      </Type>
+      <Type name="Field20Type" base="string">
+        <Restriction minLength="10" maxLength="10"/>
+      </Type>
+      <Type name="Field21Type" base="string">
+        <Restriction minLength="10" maxLength="10"/>
+      </Type>
+      <Type name="Field22Type" base="string">
+        <Restriction minLength="10" maxLength="10"/>
+      </Type>
+      <Type name="Field23Type" base="string">
+        <Restriction minLength="10" maxLength="10"/>
+      </Type>
+      <Type name="Field24Type" base="string">
+        <Restriction minLength="10" maxLength="10"/>
+      </Type>
+      <Type name="Field25Type" base="string">
+        <Restriction minLength="10" maxLength="10"/>
+      </Type>
+      <Type name="Field26Type" base="string">
+        <Restriction minLength="10" maxLength="10"/>
+      </Type>
+      <Type name="Field27Type" base="string">
+        <Restriction minLength="10" maxLength="10"/>
+      </Type>
+      <Type name="Field28Type" base="string">
+        <Restriction minLength="10" maxLength="10"/>
+      </Type>
+      <Type name="Field29Type" base="string">
+        <Restriction minLength="10" maxLength="10"/>
+      </Type>
+      <Type name="Field30Type" base="string">
+        <Restriction minLength="10" maxLength="10"/>
+      </Type>
+      <Type name="Field31Type" base="string">
+        <Restriction minLength="10" maxLength="10"/>
+      </Type>
+      <Type name="Field32Type" base="string">
+        <Restriction minLength="10" maxLength="10"/>
+      </Type>
+      <Type name="Field33Type" base="string">
+        <Restriction minLength="10" maxLength="10"/>
+      </Type>
+      <Type name="Field34Type" base="string">
+        <Restriction minLength="10" maxLength="10"/>
+      </Type>
+      <Type name="Field35Type" base="string">
+        <Restriction minLength="10" maxLength="10"/>
+      </Type>
+      <Type name="Field36Type" base="string">
+        <Restriction minLength="10" maxLength="10"/>
+      </Type>
+      <Type name="Field37Type" base="string">
+        <Restriction minLength="10" maxLength="10"/>
+      </Type>
+      <Type name="Field38Type" base="string">
+        <Restriction minLength="10" maxLength="10"/>
+      </Type>
+      <Type name="Field39Type" base="string">
+        <Restriction minLength="10" maxLength="10"/>
+      </Type>
+      <Type name="Field40Type" base="string">
+        <Restriction minLength="10" maxLength="10"/>
+      </Type>
+
+      <Type name="Field41Type" base="string">
+        <Restriction minLength="10" maxLength="10"/>
+      </Type>
+      
+      <Type name="FooterTextType" base="string">
+        <Restriction minLength="15" maxLength="15"/>
+      </Type>
+
+      <Type name="FooterCounterType" base="int">
+        <Restriction minLength="10" maxLength="10"/>
+      </Type>
+    </Definition>
+  </MessageDefinitions>
+</Project>

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Repss"
+    targetNamespace="http://tempuri.org/Repss.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/Repss.xsd"
+    xmlns:mstns="http://tempuri.org/Repss.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  <xs:element name="File">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Header"  type="HeaderItem" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="Row" type="RowItem" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="HeaderItem">
+    <xs:sequence>
+      <xs:element name="Date" type="xs:string" />
+      <xs:element name="UserNumber" type="xs:string"/>
+      <xs:element name="UserName" type="xs:string"/>
+      <xs:element name="UserType" type="xs:string"/>
+      <xs:element name="Branch" type="xs:string"/>
+      <xs:element name="OnUsSpecialInstruction" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="RowItem">
+    <xs:sequence>
+
+      <xs:element name="Date" type="MyDate" >
+        <xs:annotation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="UserNumber" type="xs:string"/>
+      <xs:element name="UserName" type="xs:string"/>
+      <xs:element name="UserType" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="MyDate">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\d{4}(0[1-9]|1[012])(0[1-9]|[12][0-9]|3[01])"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

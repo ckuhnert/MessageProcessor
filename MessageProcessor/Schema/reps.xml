@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Project xmlns="http://tempuri.org/project.xsd">
+  <MessageDefinitions>
+    <Definition name="Repss">
+      <Element name="File">
+        <Element name="Header" minOccurs="1" maxOccurs="1">
+          <Element name="Date" type="string" />
+          <Element name="UserNumber" type="string"/>
+          <Element name="UserName" type="string"/>
+          <Element name="UserType" type="string"/>
+          <Element name="Branch" type="string"/>
+          <Element name="OnUsSpecialInstruction" type="string"/>
+        </Element>
+        <Element name="Row" minOccurs="0" maxOccurs="unbounded">
+          <Element name="Date" type="MyDate" />
+          <Element name="UserNumber" type="UserNumberType"/>
+          <Element name="UserName" type="string"/>
+          <Element name="UserType" type="int"/>
+        </Element>
+      </Element>
+
+      <Type name="MyDate" base="date">
+        <Restriction format="dd/MM/yyyy"/>
+      </Type>
+
+      <Type name="UserNumberType" base="string">
+        <Restriction minLength="5" maxLength="12"/>
+      </Type>
+    </Definition>
+  </MessageDefinitions>
+</Project>

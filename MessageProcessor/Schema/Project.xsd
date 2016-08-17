@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema  id="Repss2"
+           targetNamespace="http://tempuri.org/project.xsd"
+           elementFormDefault="qualified"
+           xmlns="http://tempuri.org/project.xsd"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Project">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="MessageDefinitions">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Definition" minOccurs="1" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:choice minOccurs="1" maxOccurs="unbounded">
+                    <xs:element name="Element" type="Element"/>
+                    <xs:element name="Type" type="Type"/>
+                  </xs:choice>
+                  <xs:attribute name="name" type="xs:string" use="required" />
+                  <xs:attribute name="displayName" type="xs:string" use="optional" />
+                  <xs:attribute name="description" type="xs:string" use="optional" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="Element">
+    <xs:sequence>
+      <xs:element name="Element" minOccurs="0" maxOccurs="unbounded" type="Element"/>
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:string" use="required" />
+    <xs:attribute name="minOccurs" type="xs:unsignedByte" use="optional" />
+    <xs:attribute name="maxOccurs" type="xs:string" use="optional" />
+    <xs:attribute name="mandatory" type="xs:boolean" use="optional" />
+    <xs:attribute name="displayName" type="xs:string" use="optional" />
+    <xs:attribute name="description" type="xs:string" use="optional" />
+    <xs:attribute name="type" type="xs:string" use="optional" />
+  </xs:complexType>
+
+  <xs:complexType name="Type">
+    <xs:sequence>
+      <xs:element name="Restriction">
+        <xs:complexType>
+          <xs:attribute name="format" type="xs:string" use="optional" />
+          <xs:attribute name="min" type="xs:string" use="optional" />
+          <xs:attribute name="max" type="xs:string" use="optional" />
+          <xs:attribute name="minLength" type="xs:string" use="optional" />
+          <xs:attribute name="maxLength" type="xs:string" use="optional" />
+          <xs:attribute name="pattern" type="xs:string" use="optional" />
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:string" use="required" />
+    <xs:attribute name="base" type="xs:string" use="required" />
+  </xs:complexType>
+</xs:schema>
